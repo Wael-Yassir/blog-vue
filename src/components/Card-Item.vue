@@ -10,7 +10,7 @@
       class="mb-2">
       <b-card-text> {{ this.summary }} </b-card-text>
       <div id='date-container'>
-        <b-icon icon="calendar3"></b-icon>
+        <b-icon icon="calendar3"/>
         <p id="article-date">{{ this.date }}</p>
       </div>
     </b-card>

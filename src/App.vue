@@ -1,24 +1,29 @@
 <template>
   <div id="app">
+    <Nav-Bar-Item />
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
-    <Footer />
+    <Footer-Item />
   </div>
 </template>
 
 <script>
-import Footer from './components/Footer.vue'
+import FooterItem from './components/Footer-Item.vue'
+import NavBarItem from './components/Nav-Bar-Item.vue'
 export default {
   components: {
-    Footer
+    FooterItem,
+    NavBarItem
   }
 }
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

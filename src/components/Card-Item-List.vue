@@ -26,6 +26,7 @@ export default {
 #container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 ._card {
     margin: 4px 8px;
