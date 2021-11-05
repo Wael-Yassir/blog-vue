@@ -1,18 +1,47 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Card-Item-List :articles="this.articles" style="margin: 0 5px"/>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+
+import CardItemList from '../components/Card-Item-List.vue'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    CardItemList
+  },
+  data () {
+    return {
+      articles: [
+        {
+          title: 'title1',
+          image: 'https://wallpaperaccess.com/full/176937.jpg',
+          summary: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+          date: '10.10.2021'
+        },
+        {
+          title: 'title2',
+          image: 'https://wallpaperaccess.com/full/12919.jpg',
+          summary: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+          date: '15.09.2021'
+        },
+        {
+          title: 'title3',
+          image: 'https://www.pixel4k.com/wp-content/uploads/2019/06/reindeer-digital-art-4k_1560535395.jpg',
+          summary: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+          date: '07.04.2021'
+        },
+        {
+          title: 'title3',
+          image: 'https://www.pixel4k.com/wp-content/uploads/2019/06/reindeer-digital-art-4k_1560535395.jpg',
+          summary: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+          date: '07.04.2021'
+        }
+      ]
+    }
   }
 }
 </script>
