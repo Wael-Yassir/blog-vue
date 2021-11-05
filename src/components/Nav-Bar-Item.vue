@@ -1,7 +1,7 @@
 <template>
     <div style='margin-bottom: 45px;'>
         <b-navbar type="dark" variant="success">
-            <b-icon flip-h="false" icon="vector-pen"/>
+            <b-icon :flip-h="false" icon="vector-pen"/>
             <b-navbar-brand href="#">|BLOGGER</b-navbar-brand>
             <div id="nav">
                 <router-link to="/">Home</router-link> |

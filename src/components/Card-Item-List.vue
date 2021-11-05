@@ -1,6 +1,6 @@
 <template>
     <div id="container">
-        <Card-Item class="_card" v-for="(article, index) in articles" :key="index"
+        <Card-Item @click.native="show" class="_card" v-for="(article, index) in articles" :key="index"
         :title="article.title"
         :image="article.image"
         :summary="article.summary"
@@ -18,6 +18,11 @@ export default {
   props: ['articles'],
   components: {
     CardItem
+  },
+  methods: {
+    show: function () {
+      console.log('Hello, from card-item!')
+    }
   }
 }
 </script>
@@ -30,5 +35,8 @@ export default {
 }
 ._card {
     margin: 4px 8px;
+}
+._card :hover {
+  cursor: pointer;
 }
 </style>
