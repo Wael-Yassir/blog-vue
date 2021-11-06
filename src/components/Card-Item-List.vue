@@ -1,11 +1,11 @@
 <template>
     <div id="container">
-        <Card-Item class="_card" v-for="(article, index) in articles" :key="index"
+        <Card-Item class="_card" v-for="(article) in articles" :key="article.id"
+        :id="article.id"
         :title="article.title"
         :image="article.image"
         :summary="article.summary"
         :date="article.date"
-        @onCardSelected="cardSelected"
         />
     </div>
 </template>
@@ -22,14 +22,9 @@ export default {
   },
   data () {
     return {
-      isCardSelected: false
     }
   },
   methods: {
-    cardSelected (selected) {
-      this.isCardSelected = selected
-      this.$emit('onCardSelected', this.isCardSelected)
-    }
   }
 }
 </script>

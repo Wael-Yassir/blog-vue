@@ -2,7 +2,9 @@
   <div id="app">
     <Nav-Bar-Item />
     <router-view />
-    <Footer-Item />
+    <div style="margin-top: 50px">
+      <Footer-Item />
+    </div>
   </div>
 </template>
 
