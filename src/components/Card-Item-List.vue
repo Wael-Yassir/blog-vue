@@ -1,10 +1,11 @@
 <template>
     <div id="container">
-        <Card-Item @click.native="show" class="_card" v-for="(article, index) in articles" :key="index"
+        <Card-Item class="_card" v-for="(article, index) in articles" :key="index"
         :title="article.title"
         :image="article.image"
         :summary="article.summary"
         :date="article.date"
+        @onCardSelected="cardSelected"
         />
     </div>
 </template>
@@ -19,9 +20,15 @@ export default {
   components: {
     CardItem
   },
+  data () {
+    return {
+      isCardSelected: false
+    }
+  },
   methods: {
-    show: function () {
-      console.log('Hello, from card-item!')
+    cardSelected (selected) {
+      this.isCardSelected = selected
+      this.$emit('onCardSelected', this.isCardSelected)
     }
   }
 }

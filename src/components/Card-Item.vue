@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div @click="select">
     <b-card
       :title="title"
       :img-src="image"
@@ -25,6 +25,17 @@ export default {
     image: String,
     summary: String,
     date: String
+  },
+  data () {
+    return {
+      isSelected: false
+    }
+  },
+  methods: {
+    select () {
+      this.isSelected = true
+      this.$emit('onCardSelected', this.isSelected)
+    }
   }
 }
 </script>
